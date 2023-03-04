@@ -1,1 +1,47 @@
-/*# sourceMappingURL=bio.css.map */
+.navbar {
+  background-color: #323232;
+  text-align: center;
+}
+.navbar_header {
+  margin: 0;
+  color: #FFFFFF;
+  font-size: 2rem;
+  padding-top: 25px;
+}
+.navbar_list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  margin: 0;
+}
+.navbar_item {
+  width: 50%;
+  padding: 10px 20px 15px 20px;
+  border-bottom: 5px solid transparent;
+  margin: 0;
+}
+.navbar_item:hover {
+  border-bottom: 5px solid #FFFFFF;
+  color: #FFFFFF;
+}
+.navbar_item:hover a {
+  color: #FFFFFF;
+}
+.navbar_item a {
+  text-decoration: none;
+  font-size: 1.25rem;
+  color: #AFAFAF;
+}
+.navbar_item a:link, .navbar_item a :active {
+  color: #AFAFAF;
+}
+
+@font-face {
+  font-family: avenir;
+  src: url(../assets/Font/AvenirNextLTPro-Demi.otf);
+}
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: avenir;
+}/*# sourceMappingURL=bio.css.map */

@@ -1,1 +1,14 @@
 @use "./partials/header" as *;
+
+
+@font-face {
+    font-family: avenir;
+    src: url(../assets/Font/AvenirNextLTPro-Demi.otf);
+}
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+    font-family:avenir;
+    
+}
