@@ -1,0 +1,58 @@
+@use "./variables" as *;
+
+.footer {
+
+    background-color: $primary-text;
+    color: $light-text;
+
+    &__logos {
+        display: flex;
+        justify-content: space-between;
+        width: 40%;
+    }
+
+    &__name {
+        margin-top: 20px;
+
+        & p {
+            margin: 0;
+            line-height: 1.5rem;
+        }
+    }
+
+
+    &__info, &__email {
+        margin: 20px 0;
+        color: $secondary-text;
+        
+
+        & p {
+            margin: 0;
+            line-height: 1.5rem;
+        }
+    }
+
+    &__container {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    &__header {
+        padding-top: 30px;
+        font-size: 2rem;
+    }
+
+    &__end-header {
+        margin-top: 100px;
+        color: $secondary-text;
+        font-size: 2rem;
+    }
+
+    &__copyright {
+        margin: 0;
+        padding-bottom: 16px;
+        color: $secondary-text;
+        font-size: 0.9rem;
+    }
+}
+

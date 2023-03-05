@@ -141,6 +141,50 @@
   margin-bottom: 20px;
 }
 
+.footer {
+  background-color: #323232;
+  color: #FFFFFF;
+}
+.footer__logos {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+}
+.footer__name {
+  margin-top: 20px;
+}
+.footer__name p {
+  margin: 0;
+  line-height: 1.5rem;
+}
+.footer__info, .footer__email {
+  margin: 20px 0;
+  color: #AFAFAF;
+}
+.footer__info p, .footer__email p {
+  margin: 0;
+  line-height: 1.5rem;
+}
+.footer__container {
+  width: 90%;
+  margin: 0 auto;
+}
+.footer__header {
+  padding-top: 30px;
+  font-size: 2rem;
+}
+.footer__end-header {
+  margin-top: 100px;
+  color: #AFAFAF;
+  font-size: 2rem;
+}
+.footer__copyright {
+  margin: 0;
+  padding-bottom: 16px;
+  color: #AFAFAF;
+  font-size: 0.9rem;
+}
+
 @font-face {
   font-family: avenir;
   src: url(../assets/Font/AvenirNextLTPro-Regular.otf);
