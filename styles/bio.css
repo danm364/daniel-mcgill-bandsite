@@ -1,3 +1,11 @@
+@font-face {
+  font-family: avenir bold;
+  src: url(../../assets/Font/AvenirNextLTPro-Bold.otf);
+}
+@font-face {
+  font-family: avenir demi;
+  src: url(../../assets/Font/AvenirNextLTPro-Demi.otf);
+}
 .navbar {
   background-color: #323232;
   text-align: center;
@@ -57,9 +65,39 @@
   font-size: 1.75rem;
 }
 
+.content {
+  width: 90%;
+  text-align: start;
+  align-items: center;
+  margin: 0 auto;
+}
+.content__header {
+  font-family: avenir bold;
+  font-size: 1.75rem;
+}
+.content__img {
+  background-image: url(../../assets/images/band.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 200px;
+}
+.content__info-header {
+  font-size: 1.1rem;
+}
+.content__quote {
+  line-height: 30px;
+  font-family: avenir demi;
+}
+.content__quote-author {
+  font-family: avenir demi;
+}
+.content__info {
+  line-height: 22px;
+}
+
 @font-face {
   font-family: avenir;
-  src: url(../assets/Font/AvenirNextLTPro-Demi.otf);
+  src: url(../assets/Font/AvenirNextLTPro-Regular.otf);
 }
 body {
   margin: 0;

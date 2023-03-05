@@ -1,0 +1,40 @@
+@use "./variables";
+
+.content {
+    width: 90%;
+    text-align:start;
+    
+    align-items: center;
+    margin: 0 auto;
+
+
+    &__header {
+        font-family: avenir bold;
+        font-size: 1.75rem;
+    }
+
+    &__img {
+        background-image: url(../../assets/images/band.jpg);
+        background-size: cover;
+        width: 100%;
+        height: 200px;
+    }
+
+    &__info-header {
+        font-size: 1.1rem;
+    }
+
+    &__quote {
+        line-height: 30px;
+        font-family: avenir demi;
+    }
+
+    &__quote-author {
+        font-family: avenir demi;
+    }
+
+    &__info {
+        line-height: 22px;
+    }
+    
+}

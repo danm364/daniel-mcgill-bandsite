@@ -5,3 +5,13 @@ $light-text: #FFFFFF;
 $hover-color: #000000;
 $divider-color: #E1E1E1;
 $alt-bg: #FAFAFA;
+
+@font-face {
+    font-family: avenir bold;
+    src: url(../../assets/Font/AvenirNextLTPro-Bold.otf);
+}
+
+@font-face {
+    font-family: avenir demi;
+    src: url(../../assets/Font/AvenirNextLTPro-Demi.otf);
+}
