@@ -1,0 +1,53 @@
+@use "./variables" as *;
+
+.gallery {
+    background-color: $alt-bg;
+    margin: 0;
+
+    &__container {
+        width: 90%;
+        margin: 0 auto;
+
+        
+    }
+
+    &__header {
+        margin: 0;
+        padding-top: 30px;
+    }
+
+    &__img {
+        height: 200px;
+        background-size: cover;
+        margin-top: 20px;
+        &--1 {
+            background-image: url(../../assets/images/Photo-gallery-1.jpg);
+        }
+        &--2 {
+            background-image: url(../../assets/images/Photo-gallery-2.jpg);
+        }
+        &--3 {
+            background-image: url(../../assets/images/Photo-gallery-3.jpg);
+        }
+        &--4 {
+            background-image: url(../../assets/images/Photo-gallery-4.jpg);
+        }
+        &--5 {
+            background-image: url(../../assets/images/Photo-gallery-5.jpg);
+        }
+        &--6 {
+            background-image: url(../../assets/images/Photo-gallery-6.jpg);
+        }
+        &--7 {
+            background-image: url(../../assets/images/Photo-gallery-7.jpg);
+        }
+        &--8 {
+            background-image: url(../../assets/images/Photo-gallery-8.jpg);
+        }
+        &--9 {
+            background-image: url(../../assets/images/Photo-gallery-9.jpg);
+            margin-bottom: 20px;
+        }
+        
+    }
+}

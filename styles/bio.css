@@ -95,6 +95,52 @@
   line-height: 22px;
 }
 
+.gallery {
+  background-color: #FAFAFA;
+  margin: 0;
+}
+.gallery__container {
+  width: 90%;
+  margin: 0 auto;
+}
+.gallery__header {
+  margin: 0;
+  padding-top: 30px;
+}
+.gallery__img {
+  height: 200px;
+  background-size: cover;
+  margin-top: 20px;
+}
+.gallery__img--1 {
+  background-image: url(../../assets/images/Photo-gallery-1.jpg);
+}
+.gallery__img--2 {
+  background-image: url(../../assets/images/Photo-gallery-2.jpg);
+}
+.gallery__img--3 {
+  background-image: url(../../assets/images/Photo-gallery-3.jpg);
+}
+.gallery__img--4 {
+  background-image: url(../../assets/images/Photo-gallery-4.jpg);
+}
+.gallery__img--5 {
+  background-image: url(../../assets/images/Photo-gallery-5.jpg);
+}
+.gallery__img--6 {
+  background-image: url(../../assets/images/Photo-gallery-6.jpg);
+}
+.gallery__img--7 {
+  background-image: url(../../assets/images/Photo-gallery-7.jpg);
+}
+.gallery__img--8 {
+  background-image: url(../../assets/images/Photo-gallery-8.jpg);
+}
+.gallery__img--9 {
+  background-image: url(../../assets/images/Photo-gallery-9.jpg);
+  margin-bottom: 20px;
+}
+
 @font-face {
   font-family: avenir;
   src: url(../assets/Font/AvenirNextLTPro-Regular.otf);
