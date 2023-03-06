@@ -18,10 +18,13 @@
 
     &__img {
         height: 200px;
-        background-size: cover;
+        max-width: 355px;
         margin-top: 20px;
+        background-size: cover;
         &--1 {
             background-image: url(../../assets/images/Photo-gallery-1.jpg);
+            
+            
         }
         &--2 {
             background-image: url(../../assets/images/Photo-gallery-2.jpg);

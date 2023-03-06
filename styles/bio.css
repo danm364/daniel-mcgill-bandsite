@@ -25,22 +25,22 @@
 .navbar__item {
   width: 50%;
   padding: 10px 20px 15px 20px;
-  border-bottom: 5px solid transparent;
   margin: 0;
+  border-bottom: 5px solid transparent;
+}
+.navbar__item * {
+  text-decoration: none;
+  color: #AFAFAF;
 }
 .navbar__item:hover {
   border-bottom: 5px solid #FFFFFF;
   color: #FFFFFF;
 }
-.navbar__item:hover a {
+.navbar__item:hover > * {
   color: #FFFFFF;
-}
-.navbar__item a {
   text-decoration: none;
-  font-size: 1.25rem;
-  color: #AFAFAF;
 }
-.navbar__item a:link, .navbar__item a :active {
+.navbar__item:hover > *:link, .navbar__item:hover > * :active {
   color: #AFAFAF;
 }
 
@@ -48,7 +48,6 @@
   background-image: url(../../assets/images/hero-bio.jpg);
   height: 250px;
   background-size: cover;
-  display: flex;
   align-items: center;
 }
 .hero--overlay {
@@ -68,7 +67,8 @@
 .content {
   width: 90%;
   text-align: start;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
 }
 .content__header {
@@ -78,7 +78,8 @@
 .content__img {
   background-image: url(../../assets/images/band.jpg);
   background-size: cover;
-  width: 100%;
+  min-width: 225px;
+  max-width: 325px;
   height: 200px;
 }
 .content__info-header {
@@ -109,8 +110,9 @@
 }
 .gallery__img {
   height: 200px;
-  background-size: cover;
+  max-width: 355px;
   margin-top: 20px;
+  background-size: cover;
 }
 .gallery__img--1 {
   background-image: url(../../assets/images/Photo-gallery-1.jpg);
