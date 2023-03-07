@@ -9,41 +9,53 @@
 .navbar {
   background-color: #323232;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  padding-top: 20px;
+  justify-content: center;
 }
 .navbar__header {
-  margin: 0;
   color: #FFFFFF;
   font-size: 2rem;
-  padding-top: 25px;
+  margin: 0;
 }
 .navbar__list {
-  list-style: none;
-  padding: 0;
   display: flex;
-  margin: 0;
+  padding-left: 0;
+  justify-content: space-around;
 }
 .navbar__item {
   width: 50%;
-  padding: 10px 20px 15px 20px;
-  margin: 0;
-  border-bottom: 5px solid transparent;
+  list-style: none;
 }
-.navbar__item * {
+.navbar__item a {
+  color: #AFAFAF;
+}
+.navbar__item a:active {
   text-decoration: none;
   color: #AFAFAF;
 }
-.navbar__item:hover {
-  border-bottom: 5px solid #FFFFFF;
-  color: #FFFFFF;
-}
-.navbar__item:hover > * {
-  color: #FFFFFF;
+.navbar__item a:link {
   text-decoration: none;
-}
-.navbar__item:hover > *:link, .navbar__item:hover > * :active {
   color: #AFAFAF;
 }
 
+@media (min-width: 768px) {
+  .navbar__list {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    text-align: center;
+  }
+  .navbar--tablet {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    justify-content: space-around;
+  }
+}
 .hero {
   background-image: url(../../assets/images/hero-bio.jpg);
   height: 250px;
