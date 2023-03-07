@@ -13,7 +13,8 @@
   flex-direction: column;
   height: 100px;
   padding-top: 20px;
-  justify-content: center;
+  justify-content: end;
+  border-bottom: 5px solid transparent;
 }
 .navbar__header {
   color: #FFFFFF;
@@ -23,6 +24,8 @@
 .navbar__list {
   display: flex;
   padding-left: 0;
+  height: 100%;
+  padding-bottom: 16px;
   justify-content: space-around;
 }
 .navbar__item {
@@ -41,21 +44,6 @@
   color: #AFAFAF;
 }
 
-@media (min-width: 768px) {
-  .navbar__list {
-    display: flex;
-    flex-direction: row;
-    gap: 3rem;
-    text-align: center;
-  }
-  .navbar--tablet {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    width: 60%;
-    justify-content: space-around;
-  }
-}
 .hero {
   background-image: url(../../assets/images/hero-bio.jpg);
   height: 50vw;
