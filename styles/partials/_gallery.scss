@@ -6,20 +6,25 @@
 
     &__container {
         width: 90%;
+        display: flex;
+        flex-wrap: wrap;
         margin: 0 auto;
+        gap: 30px;
 
         
     }
 
     &__header {
-        margin: 0;
+        margin: 0 auto;
         padding-top: 30px;
+        width: 90%;
     }
 
     &__img {
         height: 200px;
-        max-width: 355px;
-        margin-top: 20px;
+        width: 100%;
+        max-width: 320px;
+        
         background-size: cover;
         &--1 {
             background-image: url(../../assets/images/Photo-gallery-1.jpg);
@@ -54,3 +59,4 @@
         
     }
 }
+
