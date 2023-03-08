@@ -2,5 +2,77 @@
 @use "./mixins" as *;
 
 .navbar {
+    background-color: $primary-text;
+    color: $light-text;
     
+    
+    &__item {
+        border-bottom: 5px solid transparent;
+        padding-bottom: 20px;
+    }
+
+    &__item:hover {
+        border-bottom: 5px solid $light-text;
+
+        & * {
+            color: $light-text;
+        }
+
+    }
+
+    &__list {
+        padding-left: 0;
+        width: 100%;
+        display: flex;
+        margin: 0;
+        text-align: center;
+
+        & li  {
+            
+            list-style: none;
+            flex: 1;
+            
+
+        
+            & a {
+            color: $secondary-text;
+            text-decoration: none;
+            }
+        }
+    }
+}
+.tablet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@media (min-width:768px) {
+    
+    .navbar {
+        
+
+        &__list {
+            width: fit-content;
+            
+        }
+        
+        &__header {
+            margin: 0;
+            padding-left: 2rem;
+        }
+        
+        &__item {
+            padding: 40px 0;
+            margin-right: 40px;
+        }
+    }
+
+    .tablet {
+        
+        width: 50%;
+        justify-content: space-evenly;
+        align-items: baseline;
+
+        flex-direction: row;
+    }
 }

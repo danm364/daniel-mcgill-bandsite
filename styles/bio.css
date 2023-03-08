@@ -8,42 +8,60 @@
 }
 .navbar {
   background-color: #323232;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  height: 100px;
-  padding-top: 20px;
-  justify-content: end;
-  border-bottom: 5px solid transparent;
-}
-.navbar__header {
   color: #FFFFFF;
-  font-size: 2rem;
-  margin: 0;
-}
-.navbar__list {
-  display: flex;
-  padding-left: 0;
-  height: 100%;
-  padding-bottom: 16px;
-  justify-content: space-around;
 }
 .navbar__item {
-  width: 50%;
+  border-bottom: 5px solid transparent;
+  padding-bottom: 20px;
+}
+.navbar__item:hover {
+  border-bottom: 5px solid #FFFFFF;
+}
+.navbar__item:hover * {
+  color: #FFFFFF;
+}
+.navbar__list {
+  padding-left: 0;
+  width: 100%;
+  display: flex;
+  margin: 0;
+  text-align: center;
+}
+.navbar__list li {
   list-style: none;
+  flex: 1;
 }
-.navbar__item a {
+.navbar__list li a {
   color: #AFAFAF;
-}
-.navbar__item a:active {
   text-decoration: none;
-  color: #AFAFAF;
-}
-.navbar__item a:link {
-  text-decoration: none;
-  color: #AFAFAF;
 }
 
+.tablet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .navbar__list {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .navbar__header {
+    margin: 0;
+    padding-left: 2rem;
+  }
+  .navbar__item {
+    padding: 40px 0;
+    margin-right: 40px;
+  }
+  .tablet {
+    width: 50%;
+    justify-content: space-evenly;
+    align-items: baseline;
+    flex-direction: row;
+  }
+}
 .hero {
   background-image: url(../../assets/images/hero-bio.jpg);
   height: 50vw;
