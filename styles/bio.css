@@ -137,6 +137,7 @@
 .gallery__img {
   height: 250px;
   flex: 0 0 30%;
+  min-width: 340px;
   background-size: cover;
 }
 .gallery__img--1 {
