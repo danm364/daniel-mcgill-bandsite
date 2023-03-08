@@ -5,7 +5,7 @@
     text-align:start;
     display: flex;
     flex-direction: column;
-    
+    max-width: 1100px;
     margin: 0 auto;
 
 
@@ -39,4 +39,12 @@
         line-height: 22px;
     }
     
+}
+
+@media (min-width:768px) {
+    .content__container {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
 }
