@@ -2,7 +2,9 @@
 
 .gallery {
     background-color: $alt-bg;
-    margin: 0;
+    margin: 0 auto;
+    
+    
 
     &__container {
         width: 90%;
@@ -10,20 +12,25 @@
         flex-wrap: wrap;
         margin: 0 auto;
         gap: 30px;
+        max-width: 1400px;
+        padding-bottom: 30px;
+        
 
         
     }
 
     &__header {
         margin: 0 auto;
-        padding-top: 30px;
+        padding: 30px 0;
         width: 90%;
+        font-size: 3rem;
+        max-width: 1400px;
+        
     }
 
     &__img {
-        height: 200px;
-        width: 100%;
-        max-width: 320px;
+        height: 250px;
+        flex: 0 0 30%;
         
         background-size: cover;
         &--1 {
