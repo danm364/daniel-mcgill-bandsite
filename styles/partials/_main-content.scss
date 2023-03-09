@@ -17,8 +17,7 @@
     &__img {
         background-image: url(../../assets/images/band.jpg);
         background-size: cover;
-        min-width: 225px;
-        max-width: 325px;
+        
         height: 200px;
     }
 
@@ -28,6 +27,7 @@
 
     &__quote {
         line-height: 30px;
+        
         font-family: avenir demi;
     }
 
@@ -47,4 +47,20 @@
         flex-direction: row;
         gap: 20px;
     }
+
+    .content__img {
+        height: 400px;
+        width: 100%;
+    }
 }
+
+@media (min-width:960px) {
+    .content__img {
+        height: 600px;
+    }
+
+    .content__quote {
+        width: 80%;
+    }
+}
+
