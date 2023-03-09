@@ -14,6 +14,9 @@
         gap: 30px;
         max-width: 1400px;
         padding-bottom: 30px;
+        justify-content: center;
+        
+        
         
 
         
@@ -26,12 +29,15 @@
         font-size: max(3vw, 2rem);
         max-width: 1400px;
         
+        
     }
 
     &__img {
         height: 250px;
         flex: 0 0 30%;
         min-width: 340px;
+        
+        
         
         background-size: cover;
         &--1 {
@@ -68,3 +74,16 @@
     }
 }
 
+@media (min-width:1210px) {
+    .gallery__container {
+        
+        justify-content: start;
+       
+    }
+
+    .gallery__img {
+        flex-grow: 1;
+    }
+
+
+}

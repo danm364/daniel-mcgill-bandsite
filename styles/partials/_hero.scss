@@ -3,7 +3,7 @@
 
 .hero {
     background-image: url(../../assets/images/hero-bio.jpg);
-    height: 50vw;
+    height: 40vw;
     background-size: cover;
     align-items: center;
 
@@ -17,7 +17,7 @@
         margin: 0;
         color: $light-text;
         padding-left: 1rem;
-        font-size: 1.75rem;
+        font-size: max(5vw, 1.75rem);
     }
 
 }
