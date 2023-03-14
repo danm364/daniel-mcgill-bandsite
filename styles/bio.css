@@ -200,6 +200,9 @@
   background-color: #323232;
   color: #FFFFFF;
 }
+.footer--tablet-header {
+  display: none;
+}
 .footer__logos {
   display: flex;
   justify-content: space-between;
@@ -223,6 +226,7 @@
 .footer__container {
   width: 90%;
   margin: 0 auto;
+  max-width: 1400px;
 }
 .footer__header {
   padding-top: 30px;
@@ -241,6 +245,49 @@
   font-size: 0.9rem;
 }
 
+@media (min-width: 768px) {
+  .footer__container {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer--tablet {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
+  .footer--tablet > * {
+    width: 30%;
+  }
+  .footer__logos {
+    width: 10%;
+  }
+  .footer__logos img {
+    width: 24px;
+    height: 24px;
+  }
+  .footer--tablet-header {
+    display: block;
+    width: 33%;
+    text-align: end;
+    font-size: 2rem;
+    flex-grow: 1;
+  }
+  .footer__end-header {
+    display: none;
+  }
+  .footer__copyright {
+    padding: 70px 0;
+    width: 100%;
+  }
+  .footer__container-info {
+    max-width: 275px;
+    min-width: 220px;
+  }
+  .footer__header {
+    max-width: 275px;
+  }
+}
 @font-face {
   font-family: avenir;
   src: url(../assets/Font/AvenirNextLTPro-Regular.otf);
