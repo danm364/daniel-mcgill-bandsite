@@ -39,7 +39,9 @@
 .tablet {
   display: flex;
   flex-direction: column;
+  text-align: center;
   align-items: center;
+  min-width: 422px;
 }
 
 @media (min-width: 768px) {
@@ -56,9 +58,10 @@
     margin-right: 40px;
   }
   .tablet {
-    width: 50%;
+    width: 35%;
     justify-content: space-evenly;
     align-items: baseline;
+    align-items: center;
     flex-direction: row;
   }
 }
