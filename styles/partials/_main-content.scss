@@ -1,17 +1,27 @@
 @use "./variables";
 
 .content {
-    width: 90%;
+    
     text-align:start;
     display: flex;
     flex-direction: column;
-    max-width: 1100px;
-    margin: 0 auto;
-
+    justify-content: center;
+    
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+        max-width: 1100px;
+        width: 90%;
+        align-self: center;
+      }
 
     &__header {
         font-family: avenir bold;
         font-size: 1.75rem;
+        align-self: center;
+        width: 90%;
+        max-width: 1300px;
+        margin: 50px 0;
         
     }
 
