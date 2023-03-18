@@ -16,8 +16,9 @@
       }
 
     &__header {
-        font-family: avenir bold;
-        font-size: 1.75rem;
+        font-family: avenir;
+        font-weight: 600;
+        font-size: 2.25rem;
         align-self: center;
         width: 90%;
         max-width: 1300px;
@@ -37,17 +38,24 @@
     }
 
     &__info-header {
-        font-size: 1.1rem;
+        font-size: 1.5rem;
+        font-family: avenir;
+        font-weight: 700;
     }
 
     &__quote {
         line-height: 30px;
-        
-        font-family: avenir demi;
+        font-size: 1.5rem;
+        font-family: avenir;
+        font-weight: 600;
     }
 
     &__quote-author {
-        font-family: avenir demi;
+        font-family: avenir;
+        font-weight: 600;
+        font-size: 1.25rem;
+        margin-top: 0;
+        margin-bottom: 3rem;
     }
 
     &__info {

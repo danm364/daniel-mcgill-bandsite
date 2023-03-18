@@ -1,20 +1,35 @@
 @font-face {
-  font-family: avenir bold;
-  src: url(../../assets/Font/AvenirNextLTPro-Bold.otf);
+  font-family: avenir;
+  src: url(../../assets/Font/AvenirNextLTPro-Bold.otf) format("woff2");
+  font-weight: 700;
+  font-style: normal;
 }
 @font-face {
-  font-family: avenir demi;
-  src: url(../../assets/Font/AvenirNextLTPro-Demi.otf);
+  font-family: avenir;
+  src: url(../../assets/Font/AvenirNextLTPro-Demi.otf) format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: avenir;
+  src: url(../../assets/Font/AvenirNextLTPro-Regular.otf) format("woff2");
+  font-weight: 400;
+  font-style: normal;
 }
 .navbar {
   background-color: #323232;
   color: #FFFFFF;
 }
-.navbar__header a {
+.navbar__header {
+  font-family: avenir;
+  font-weight: 400;
+  font-size: 2rem;
+}
+.navbar a {
   text-decoration: none;
   color: #FFFFFF;
 }
-.navbar__header a:active, .navbar__header a:link {
+.navbar a:active, .navbar a:link {
   color: #FFFFFF;
   text-decoration: none;
 }
@@ -89,6 +104,8 @@
 .hero__header {
   margin: 0;
   color: #FFFFFF;
+  font-family: avenir;
+  font-weight: 600;
   padding-left: 5%;
   font-size: max(5vw, 1.75rem);
 }
@@ -107,8 +124,9 @@
   align-self: center;
 }
 .content__header {
-  font-family: avenir bold;
-  font-size: 1.75rem;
+  font-family: avenir;
+  font-weight: 600;
+  font-size: 2.25rem;
   align-self: center;
   width: 90%;
   max-width: 1300px;
@@ -125,14 +143,22 @@
      object-position: bottom;
 }
 .content__info-header {
-  font-size: 1.1rem;
+  font-size: 1.5rem;
+  font-family: avenir;
+  font-weight: 700;
 }
 .content__quote {
   line-height: 30px;
-  font-family: avenir demi;
+  font-size: 1.5rem;
+  font-family: avenir;
+  font-weight: 600;
 }
 .content__quote-author {
-  font-family: avenir demi;
+  font-family: avenir;
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-top: 0;
+  margin-bottom: 3rem;
 }
 .content__info {
   line-height: 26px;
@@ -168,6 +194,8 @@
   margin: 0 auto;
   padding: 30px 0;
   width: 90%;
+  font-family: avenir;
+  font-weight: 600;
   font-size: max(3vw, 2rem);
   max-width: 1400px;
 }
@@ -223,8 +251,11 @@
 }
 .footer__header {
   padding-top: 30px;
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-top: 0;
+  font-family: avenir;
+  font-weight: 600;
+  text-align: start;
 }
 .footer__end-header {
   margin-top: 100px;
@@ -251,6 +282,9 @@
   }
   .footer--tablet > * {
     width: 30%;
+  }
+  .footer--tablet:first-child {
+    align-content: center;
   }
   .footer__logos {
     width: 10%;
@@ -281,12 +315,10 @@
     max-width: 275px;
   }
 }
-@font-face {
-  font-family: avenir;
-  src: url(../assets/Font/AvenirNextLTPro-Regular.otf);
-}
 body {
   margin: 0;
   box-sizing: border-box;
   font-family: avenir;
+  font-weight: 400;
+  font-style: normal;
 }/*# sourceMappingURL=bio.css.map */

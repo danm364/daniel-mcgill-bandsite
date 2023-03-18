@@ -3,15 +3,15 @@
 @use "./partials/main-content" as *;
 @use "./partials/gallery" as *;
 @use "./partials/footer" as *;
+@use "./partials/variables" as *;
 
-@font-face {
-    font-family: avenir;
-    src: url(../assets/Font/AvenirNextLTPro-Regular.otf);
-}
+
 
 body {
     margin: 0;
     box-sizing: border-box;
     font-family:avenir;
+    font-weight: 400;
+    font-style: normal;
     
 }

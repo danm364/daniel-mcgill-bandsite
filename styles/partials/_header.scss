@@ -5,13 +5,20 @@
     background-color: $primary-text;
     color: $light-text;
     
-    &__header a {
-        text-decoration: none;
-        color: $light-text;
-        &:active, &:link {
+    &__header {
+        font-family: avenir;
+        font-weight: 400;
+        font-size: 2rem;
+    }
+    
+    
+        & a {
+            text-decoration: none;
+            color: $light-text;
+            &:active, &:link {
             color: $light-text;
             text-decoration: none;
-        }
+            }
     }
     
     &__item {

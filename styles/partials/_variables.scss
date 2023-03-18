@@ -7,11 +7,22 @@ $divider-color: #E1E1E1;
 $alt-bg: #FAFAFA;
 
 @font-face {
-    font-family: avenir bold;
-    src: url(../../assets/Font/AvenirNextLTPro-Bold.otf);
+    font-family: avenir;
+    src: url(../../assets/Font/AvenirNextLTPro-Bold.otf) format("woff2");
+    font-weight: 700;
+    font-style: normal;
 }
 
 @font-face {
-    font-family: avenir demi;
-    src: url(../../assets/Font/AvenirNextLTPro-Demi.otf);
+    font-family: avenir;
+    src: url(../../assets/Font/AvenirNextLTPro-Demi.otf) format("woff2");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: avenir;
+    src: url(../../assets/Font/AvenirNextLTPro-Regular.otf) format("woff2");
+    font-weight: 400;
+    font-style: normal;
 }
