@@ -63,7 +63,6 @@
     
     .navbar {
         
-
         &__list {
             width: fit-content;
             
@@ -76,7 +75,12 @@
         
         &__item {
             padding: 40px 0;
-            margin-right: 40px;
+            
+
+            &:first-child {
+                margin-left: 30px;
+                margin-right: 40px;
+            }
             
         }
     }
