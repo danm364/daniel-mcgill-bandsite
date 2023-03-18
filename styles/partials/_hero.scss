@@ -15,11 +15,10 @@
 
     &__header {
         margin: 0;
+        @include avenir-demi( max(5vw, 1.75rem));
         color: $light-text;
-        font-family: avenir;
-        font-weight: 600;
         padding-left: 5%;
-        font-size: max(5vw, 1.75rem);
+        
     }
 
 }
