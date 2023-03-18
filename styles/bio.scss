@@ -4,14 +4,12 @@
 @use "./partials/gallery" as *;
 @use "./partials/footer" as *;
 @use "./partials/variables" as *;
-
+@use "./partials/mixins" as *;
 
 
 body {
     margin: 0;
     box-sizing: border-box;
-    font-family:avenir;
-    font-weight: 400;
-    font-style: normal;
+    @include avenir-regular(1rem);
     
 }

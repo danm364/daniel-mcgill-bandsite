@@ -1,4 +1,5 @@
 @use "./variables";
+@use "./mixins" as *;
 
 .content {
     
@@ -16,9 +17,8 @@
       }
 
     &__header {
-        font-family: avenir;
-        font-weight: 600;
-        font-size: 2.25rem;
+
+        @include avenir-demi(2.25rem);
         align-self: center;
         width: 90%;
         max-width: 1300px;
@@ -27,33 +27,24 @@
     }
 
     &__img {
-        background-image: url(../../assets/images/band.jpg);
-        background-size: cover;
         width: 100%;
         max-height: 550px;
         object-fit: cover;
         object-position: bottom;
         
-        
     }
 
     &__info-header {
-        font-size: 1.5rem;
-        font-family: avenir;
-        font-weight: 700;
+        @include avenir-bold(1.5rem)
     }
 
     &__quote {
         line-height: 30px;
-        font-size: 1.5rem;
-        font-family: avenir;
-        font-weight: 600;
+        @include avenir-demi(1.5rem);
     }
 
     &__quote-author {
-        font-family: avenir;
-        font-weight: 600;
-        font-size: 1.25rem;
+        @include avenir-demi(1.25rem);
         margin-top: 0;
         margin-bottom: 3rem;
     }
@@ -70,8 +61,6 @@
         flex-direction: row;
         gap: 20px;
     }
-
-    
 }
 
 @media (min-width:960px) {

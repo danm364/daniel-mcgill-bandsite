@@ -17,9 +17,6 @@
         justify-content: center;
         
         
-        
-
-        
     }
 
     &__header {
@@ -30,7 +27,6 @@
         font-weight: 600;
         font-size: max(3vw, 2rem);
         max-width: 1400px;
-        
         
     }
 
@@ -47,14 +43,13 @@
 
 @media (min-width:1210px) {
     .gallery__container {
-        
+
         justify-content: start;
-       
+        
     }
-
     .gallery__img {
+
         flex-grow: 1;
+        
     }
-
-
 }

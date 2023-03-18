@@ -6,11 +6,8 @@
     color: $light-text;
     
     &__header {
-        font-family: avenir;
-        font-weight: 400;
-        font-size: 2rem;
+        @include avenir-regular(2rem);
     }
-    
     
         & a {
             text-decoration: none;
@@ -47,8 +44,6 @@
             list-style: none;
             flex: 1;
             
-
-        
             & a {
             color: $secondary-text;
             text-decoration: none;
