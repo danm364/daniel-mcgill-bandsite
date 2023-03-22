@@ -5,7 +5,7 @@
 @use "./partials/footer" as *;
 @use "./partials/variables" as *;
 @use "./partials/mixins" as *;
-
+@use "./partials/comment-section" as *;
 
 body {
     margin: 0;
