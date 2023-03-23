@@ -1,0 +1,52 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+.feed {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    &__container {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        border-top: 1px solid $divider-color;
+        padding-top: 10px;
+        max-width: 600px;
+
+        & * {
+            width: 80%;
+            max-width: 550px;
+        }
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        
+        & * {
+            margin-bottom: 0;
+        }
+    }
+    &__name {
+        @include avenir-regular(1rem);
+    }
+
+    &__date {
+        text-align: end;
+        color: $secondary-text;
+    }
+
+    &__user-img {
+        @include userImage;
+        top: 15px;
+    }
+
+    &__text {
+        line-height: 25px;
+        margin-top: 8px;
+    }
+}

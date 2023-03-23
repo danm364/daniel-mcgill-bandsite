@@ -401,6 +401,55 @@ textarea::placeholder {
   color: black;
 }
 
+.feed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.feed__container {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  border-top: 1px solid #E1E1E1;
+  padding-top: 10px;
+  max-width: 600px;
+}
+.feed__container * {
+  width: 80%;
+  max-width: 550px;
+}
+.feed__header {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.feed__header * {
+  margin-bottom: 0;
+}
+.feed__name {
+  font-family: avenir;
+  font-weight: 400;
+  font-size: 1rem;
+}
+.feed__date {
+  text-align: end;
+  color: #AFAFAF;
+}
+.feed__user-img {
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  flex-grow: 0;
+  position: absolute;
+  left: -60px;
+  top: 15px;
+}
+.feed__text {
+  line-height: 25px;
+  margin-top: 8px;
+}
+
 body {
   margin: 0;
   box-sizing: border-box;

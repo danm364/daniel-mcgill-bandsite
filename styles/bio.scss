@@ -6,7 +6,7 @@
 @use "./partials/variables" as *;
 @use "./partials/mixins" as *;
 @use "./partials/comment-section" as *;
-
+@use "./partials/feed" as*;
 body {
     margin: 0;
     box-sizing: border-box;
