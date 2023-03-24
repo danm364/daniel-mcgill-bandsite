@@ -91,10 +91,10 @@
   }
 }
 .hero {
-  background-image: url(../../assets/images/hero-bio.jpg);
   height: 40vw;
   background-size: cover;
   align-items: center;
+  background-image: url(../../assets/images/hero-bio.jpg);
 }
 .hero--overlay {
   background-color: rgba(50, 50, 50, 0.5);
@@ -373,8 +373,10 @@
   color: #FFFFFF;
   margin-bottom: 20px;
   padding: 20px 0;
-  font-style: avenir;
+  font-family: avenir;
   font-weight: 400;
+  font-size: 1rem;
+  text-align: center;
   border-radius: 4px;
   max-width: 275px;
   font-size: 1.2rem;

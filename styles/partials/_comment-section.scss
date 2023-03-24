@@ -79,8 +79,8 @@
         color: $light-text;
         margin-bottom: 20px;
         padding: 20px 0;
-        font-style: avenir;
-        font-weight: 400;
+        @include avenir-regular(1rem);
+        text-align: center;
         border-radius: 4px;
         max-width: 275px;
         font-size: 1.2rem;

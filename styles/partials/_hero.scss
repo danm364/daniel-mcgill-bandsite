@@ -2,10 +2,8 @@
 @use "./mixins" as *;
 
 .hero {
+    @include hero-format();
     background-image: url(../../assets/images/hero-bio.jpg);
-    height: 40vw;
-    background-size: cover;
-    align-items: center;
 
     &--overlay {
         @include overlay;  

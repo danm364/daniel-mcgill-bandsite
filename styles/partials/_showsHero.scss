@@ -1,0 +1,56 @@
+@use "./mixins" as *;
+@use "./variables" as *;
+
+.hero {
+    @include hero-format();
+    background-image: url(../../assets/images/hero-shows.jpg);
+    background-position: center;
+    height: max(70vw, 400px);
+   
+
+    &--overlay {
+        @include overlay;  
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    &__header {
+        margin: 0;
+        @include avenir-demi( max(5vw, 1.75rem));
+        color: $light-text;
+        padding-left: 5%;
+        width: max(50%, 270px);
+        
+    }
+
+    &__album {
+    
+        color: $light-text;
+        padding-left: 5%;
+        font-size: max(2vw, 1rem);
+        
+    }
+
+    &__main {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        row-gap: 35px;
+    }
+
+
+}
+
+iframe {
+    padding-left: 5%;
+    max-width: 479px;
+}
+
+@media (min-width:1268px) {
+
+    .hero__main {
+        flex-direction: row;
+    }
+    
+}

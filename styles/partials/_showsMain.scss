@@ -1,0 +1,51 @@
+@use "./mixins" as *;
+@use "./variables" as *;
+
+
+.shows {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    &__container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid $divider-color;
+        
+    }
+
+    &__form {
+        width: 90%;
+        align-self: center;
+
+        & > p:nth-child(2) {
+            font-weight: 600;
+        }
+    }
+
+    &__header {
+        width: 90%;
+        align-self: center;
+        font-size: 2rem;
+    }
+
+    &__header-info {
+        color: $secondary-text;
+        @include avenir-demi(0.8rem);
+    }
+
+    &__ticket-btn {
+        width: 100%;
+        background-color: $primary-text;
+        color: $light-text;
+        margin-bottom: 20px;
+        padding: 20px 0;
+        @include avenir-regular(1rem);
+        text-align: center;
+        border-radius: 4px;
+        font-size: 1.2rem;
+        border: none;
+    }
+
+}

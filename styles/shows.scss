@@ -1,0 +1,16 @@
+@use "./partials/variables" as *;
+@use "./partials/showsHero" as *;
+@use "./partials/mixins" as *;
+@use "./partials/footer" as *;
+@use "./partials/header" as *;
+@use "./partials/showsMain" as *;
+
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+    @include avenir-regular(1rem);
+    max-width: 100%;
+    
+}
+
