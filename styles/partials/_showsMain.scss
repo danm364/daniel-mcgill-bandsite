@@ -12,12 +12,19 @@
         display: flex;
         flex-direction: column;
         border-bottom: 1px solid $divider-color;
+
+        &:last-child {
+            margin-bottom: 20px;
+        }
         
     }
 
     &__form {
         width: 90%;
         align-self: center;
+        justify-content: center;
+    
+    
 
         & > p:nth-child(2) {
             font-weight: 600;
@@ -25,6 +32,13 @@
     }
 
     &__header {
+        width: 90%;
+        align-self: center;
+        font-size: 2rem;
+    }
+
+    &__hidden-header {
+        display: none;
         width: 90%;
         align-self: center;
         font-size: 2rem;
@@ -39,13 +53,66 @@
         width: 100%;
         background-color: $primary-text;
         color: $light-text;
-        margin-bottom: 20px;
-        padding: 20px 0;
+        padding-top: 20px;
+        padding-bottom: 16px;
         @include avenir-regular(1rem);
-        text-align: center;
         border-radius: 4px;
         font-size: 1.2rem;
         border: none;
+        max-width: 400px;
+        
     }
 
+}
+
+@media (min-width:768px) {
+    .shows {
+
+        &__header-info {
+            display: none;
+
+        }
+        
+        &__form {
+            display: flex;
+            flex-direction: row;
+            column-gap: 20px;
+            justify-content: space-around;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        &__ticket-btn {
+            margin: 0;
+            width: 250px;
+            @include avenir-demi(1.5rem);
+            
+        }
+
+        &__container {
+            max-width: 1268px;
+            margin-right: 20px;
+        }
+    }
+}
+
+@media (min-width:1268px) {
+    
+    .shows {
+        
+
+        &__hidden-header {
+            display: none;
+        }
+
+        &__header {
+            display: none;
+        }
+
+        &__container {
+            align-self: flex-end;
+
+            
+        }
+    }
 }

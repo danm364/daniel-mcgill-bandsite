@@ -101,3 +101,9 @@ textarea[type='text'] {
 textarea::placeholder {
     color: black;
 }
+
+@media (min-width:768px) {
+    .shows {
+        flex-direction: row;
+    }
+}
