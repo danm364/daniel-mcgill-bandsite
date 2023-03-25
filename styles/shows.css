@@ -235,6 +235,10 @@ iframe {
     flex-direction: row;
   }
 }
+.--invisible {
+  display: none;
+}
+
 .shows {
   display: flex;
   justify-content: center;
@@ -305,6 +309,7 @@ iframe {
   .shows__ticket-btn {
     margin: 0;
     width: 250px;
+    min-width: 250px;
     font-family: avenir;
     font-weight: 600;
     font-size: 1.5rem;
@@ -313,8 +318,22 @@ iframe {
     max-width: 1268px;
     margin-right: 20px;
   }
+  .shows__form * {
+    flex: 25%;
+  }
+  .shows__form div {
+    min-width: 139px;
+  }
 }
 @media (min-width: 1268px) {
+  .--invisible {
+    display: block;
+  }
+  .shows__main-section {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+  }
   .shows__hidden-header {
     display: none;
   }
@@ -323,6 +342,7 @@ iframe {
   }
   .shows__container {
     align-self: flex-end;
+    width: 1268px;
   }
 }
 body {

@@ -1,11 +1,15 @@
 @use "./mixins" as *;
 @use "./variables" as *;
 
-
+.--invisible {
+    display: none;
+}
 .shows {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    
+    
 
     &__container {
         width: 100%;
@@ -66,7 +70,10 @@
 }
 
 @media (min-width:768px) {
+    
+
     .shows {
+
 
         &__header-info {
             display: none;
@@ -85,6 +92,7 @@
         &__ticket-btn {
             margin: 0;
             width: 250px;
+            min-width: 250px;
             @include avenir-demi(1.5rem);
             
         }
@@ -92,14 +100,29 @@
         &__container {
             max-width: 1268px;
             margin-right: 20px;
+        } 
+        &__form *{
+            flex: 25%;
+        }
+
+        &__form div {
+            min-width: 139px;
         }
     }
 }
 
 @media (min-width:1268px) {
+    .--invisible {
+        display: block;
+    }
+
     
     .shows {
-        
+        &__main-section {
+            display: flex;
+            justify-content: space-around;
+            align-content: center;
+        }        
 
         &__hidden-header {
             display: none;
@@ -111,8 +134,11 @@
 
         &__container {
             align-self: flex-end;
+            width: 1268px;
 
             
         }
+
+    
     }
 }
