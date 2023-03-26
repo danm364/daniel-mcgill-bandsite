@@ -412,6 +412,7 @@ textarea::placeholder {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 .feed__container {
   width: 90%;

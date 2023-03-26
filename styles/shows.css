@@ -344,6 +344,11 @@ iframe {
     align-self: flex-end;
     width: 1268px;
   }
+  .shows__pc-header {
+    height: 106px;
+    border-bottom: 1px solid transparent;
+    margin: 0;
+  }
 }
 body {
   margin: 0;

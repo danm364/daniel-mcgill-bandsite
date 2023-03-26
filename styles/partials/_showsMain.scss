@@ -136,9 +136,14 @@
             align-self: flex-end;
             width: 1268px;
 
-            
+        }
+        
+        &__pc-header {
+            height: 106px;
+            border-bottom: 1px solid transparent;
+            margin: 0;
+        
         }
 
-    
     }
 }
