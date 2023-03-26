@@ -4,12 +4,22 @@
 .--invisible {
     display: none;
 }
+
+.--absolute {
+    display: none;
+}
 .shows {
     display: flex;
     justify-content: center;
     flex-direction: column;
+
+    &>:first-child {
+        border-bottom: none;
+    }
     
-    
+    &__container-headers {
+        display: none;
+    }
 
     &__container {
         width: 100%;
@@ -67,14 +77,16 @@
         
     }
 
+    &__main-section {
+        margin-top: 100px;
+    }
+
 }
 
 @media (min-width:768px) {
     
 
     .shows {
-
-
         &__header-info {
             display: none;
 
@@ -83,7 +95,7 @@
         &__form {
             display: flex;
             flex-direction: row;
-            column-gap: 20px;
+            
             justify-content: space-around;
             align-items: center;
             margin: 20px 0;
@@ -101,7 +113,7 @@
             max-width: 1268px;
             margin-right: 20px;
         } 
-        &__form *{
+        &__form > * {
             flex: 25%;
         }
 
@@ -115,13 +127,21 @@
     .--invisible {
         display: block;
     }
+    .--absolute {
+        
+        display: block;
+        margin: 0;
+        font-size: 3rem;
+        
+        flex-grow: 1;
+        text-align: center;
+    }
 
     
     .shows {
         &__main-section {
             display: flex;
-            justify-content: space-around;
-            align-content: center;
+            justify-content: end;
         }        
 
         &__hidden-header {
@@ -132,18 +152,34 @@
             display: none;
         }
 
+        &__placeholder {
+            color: white;
+        }
+
         &__container {
             align-self: flex-end;
             width: 1268px;
+            position: relative;
+
+            &-headers {
+                display: flex;
+                margin-right: 20px;
+                width: 90%;
+                align-self: center;
+                margin: 0;
+                @include avenir-regular(0.8rem);
+                color: $secondary-text;
+
+                
+                
+                & * {
+                    flex: 25%;
+                }
+            }
 
         }
         
-        &__pc-header {
-            height: 106px;
-            border-bottom: 1px solid transparent;
-            margin: 0;
-        
-        }
+       
 
     }
 }
