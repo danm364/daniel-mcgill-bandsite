@@ -56,11 +56,6 @@ function createComment() {
         parentNode.appendChild(containerNode).appendChild(headerNode).insertAdjacentElement("afterend", textNode)
         headerNode.appendChild(nameNode).insertAdjacentElement("afterend", dateNode).insertAdjacentElement("afterend", imgNode)
     }
-    
-    
-    
-    
-
 
 }
 
