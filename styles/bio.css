@@ -382,6 +382,9 @@
   font-size: 1.2rem;
   border: none;
 }
+.comment__btn:hover {
+  background-color: #000000;
+}
 
 input[type=text] {
   font-family: avenir;

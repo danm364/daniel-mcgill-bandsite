@@ -85,6 +85,10 @@
         max-width: 275px;
         font-size: 1.2rem;
         border: none;
+
+        &:hover {
+            background-color: $dark-black;
+        }
     }
 }
 

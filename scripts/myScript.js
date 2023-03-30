@@ -5,8 +5,10 @@
 
 function createComment() {
 
-    //create/get all the nodes that we will need
+    //Parent container
     const parentNode = document.querySelector('.feed')
+
+    //create/get all the nodes that we will need
     const containerNode = document.createElement('div')
     const headerNode = document.createElement('div')
     const textNode = document.createElement('p')
@@ -43,14 +45,33 @@ function createComment() {
     imgNode.src = "./assets/images/Mohan-muruge.jpg"
 
     //make sure both name/comment fields are filled out
+
+    const nameField = document.querySelector('#name__input')
+    const textField = document.querySelector('#comment__text')
+
     if (nameNode.innerText === '' || textNode.innerText === '') {
-        alert("Please fill out both the name and the comment you would like to make")
+        console.log(textNode.style)
+        nameField.style.border = "1px solid red";
+        textField.style.border = "1px solid red";
+        
+    }
+    else if (nameNode.innerText === '') {
+        nameField.style.border = "1px solid red";
+        
+    }
+
+    else if (textNode.innerText === '') {
+        textField.style.border = "1px solid red";
+        alert("Please fill out both the name and the comment you would like to make");
     }
     //keep a limit on comments or else will get too cluttered
-    else if (document.querySelectorAll('.feed__container').length > 3) {
+    else if (document.querySelectorAll('.feed__container').length > 6) {
+
         alert("Comments have reached their limit on this page")
         
     }
+
+    
     //create the comment
     else {
         parentNode.appendChild(containerNode).appendChild(headerNode).insertAdjacentElement("afterend", textNode)
@@ -67,13 +88,46 @@ const commentBtn = document.querySelector('.comment__btn');
 
 commentBtn.addEventListener("click", (e) => {
 
-    /*Than we need to create new elements like the comment prototype and add new text to these new comments*/
-    
     createComment()
 });
 
-//need a div with class feed__header
-//add a two p childs feed__name and feed__date to this than one image with class feed__user-img
 
 
-//need a p with class feed__text
+const showsData = [
+    {
+        date: "Mon Sept 06 2021",
+        name: "Ronald Lane",
+        location: "San Francisco, CA"
+    },
+
+    {
+        date: "Tue Sept 21 2021",
+        name: "Pier 3 East",
+        location: "San Francisco, CA"
+    },
+
+    {
+        date: "Fri Oct 15 2021",
+        name: "View Lounge",
+        location: "San Francisco, CA"
+    },
+
+    {
+        date: "Sat Nov 06 2021",
+        name: "Hyatt Agency",
+        location: "San Francisco, CA"
+    },
+
+    {
+        date: "Fri Nov 26 2021",
+        name: "Moscow Center",
+        location: "San Francisco, CA"
+    },
+
+    {
+        date: "Wed Dec 15 2021",
+        name: "Press Club",
+        location: "San Francisco, CA"
+    },
+
+]
