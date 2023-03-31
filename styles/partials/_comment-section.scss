@@ -99,14 +99,17 @@ input[type='text'] {
 
 textarea[type='text'] {
     @include avenir-regular(1rem);
+}
 
+input::placeholder {
+    color: black;
 }
 
 textarea::placeholder {
     color: black;
 }
 
-@media (min-width:768px) {
+@media (min-width:$tablet) {
     .shows {
         flex-direction: row;
     }

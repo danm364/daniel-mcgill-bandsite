@@ -398,6 +398,14 @@ textarea[type=text] {
   font-size: 1rem;
 }
 
+input::-moz-placeholder {
+  color: black;
+}
+
+input::placeholder {
+  color: black;
+}
+
 textarea::-moz-placeholder {
   color: black;
 }

@@ -42,7 +42,7 @@ function createComment() {
     dateNode.innerText = date
     nameNode.innerText = nameInput
     textNode.innerText = commentInput
-    imgNode.src = "./assets/images/Mohan-muruge.jpg"
+    imgNode.src = "./assets/Logo/grey.png"
 
     //make sure both name/comment fields are filled out
 
@@ -74,7 +74,8 @@ function createComment() {
     
     //create the comment
     else {
-        parentNode.appendChild(containerNode).appendChild(headerNode).insertAdjacentElement("afterend", textNode)
+        parentNode.prepend(containerNode)
+        containerNode.appendChild(headerNode).insertAdjacentElement("afterend", textNode)
         headerNode.appendChild(nameNode).insertAdjacentElement("afterend", dateNode).insertAdjacentElement("afterend", imgNode)
     }
 
@@ -87,47 +88,11 @@ const commentBtn = document.querySelector('.comment__btn');
 
 
 commentBtn.addEventListener("click", (e) => {
-
     createComment()
 });
 
 
 
-const showsData = [
-    {
-        date: "Mon Sept 06 2021",
-        name: "Ronald Lane",
-        location: "San Francisco, CA"
-    },
 
-    {
-        date: "Tue Sept 21 2021",
-        name: "Pier 3 East",
-        location: "San Francisco, CA"
-    },
 
-    {
-        date: "Fri Oct 15 2021",
-        name: "View Lounge",
-        location: "San Francisco, CA"
-    },
 
-    {
-        date: "Sat Nov 06 2021",
-        name: "Hyatt Agency",
-        location: "San Francisco, CA"
-    },
-
-    {
-        date: "Fri Nov 26 2021",
-        name: "Moscow Center",
-        location: "San Francisco, CA"
-    },
-
-    {
-        date: "Wed Dec 15 2021",
-        name: "Press Club",
-        location: "San Francisco, CA"
-    },
-
-]

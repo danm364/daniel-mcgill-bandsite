@@ -7,6 +7,11 @@ $divider-color: #E1E1E1;
 $alt-bg: #FAFAFA;
 $dark-black: #000000;
 
+
+$tablet: 768px;
+$large-pc: 1268px;
+
+
 @font-face {
     font-family: avenir;
     src: url(../../assets/Font/AvenirNextLTPro-Bold.otf) format("woff2");
@@ -27,3 +32,4 @@ $dark-black: #000000;
     font-weight: 400;
     font-style: normal;
 }
+

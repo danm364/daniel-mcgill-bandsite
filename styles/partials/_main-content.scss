@@ -1,4 +1,4 @@
-@use "./variables";
+@use "./variables" as *;
 @use "./mixins" as *;
 
 .content {
@@ -55,7 +55,7 @@
     
 }
 
-@media (min-width:768px) {
+@media (min-width:$tablet) {
     .content__container {
         display: flex;
         flex-direction: row;

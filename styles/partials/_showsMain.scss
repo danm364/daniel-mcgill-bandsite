@@ -87,6 +87,12 @@
     
 
     .shows {
+
+        &__placeholder {
+            color: transparent;
+            min-width: 250px;
+        }
+
         &__header-info {
             display: none;
 
@@ -112,6 +118,20 @@
         &__container {
             max-width: 1268px;
             margin-right: 20px;
+
+            &-headers {
+                display: flex;
+                margin-right: 20px;
+                width: 90%;
+                align-self: center;
+                margin: 0;
+                @include avenir-regular(0.8rem);
+                color: $secondary-text;
+
+                & > * {
+                    flex: 25%;
+                }
+            }
         } 
         &__form > * {
             flex: 25%;
@@ -123,7 +143,7 @@
     }
 }
 
-@media (min-width:1268px) {
+@media (min-width:$large-pc) {
     .--invisible {
         display: block;
     }
@@ -152,34 +172,16 @@
             display: none;
         }
 
-        &__placeholder {
-            color: white;
-        }
+        
 
         &__container {
             align-self: flex-end;
             width: 1268px;
             position: relative;
 
-            &-headers {
-                display: flex;
-                margin-right: 20px;
-                width: 90%;
-                align-self: center;
-                margin: 0;
-                @include avenir-regular(0.8rem);
-                color: $secondary-text;
-
-                
-                
-                & * {
-                    flex: 25%;
-                }
+            
             }
 
         }
         
-       
-
     }
-}
