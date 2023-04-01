@@ -1,7 +1,10 @@
 @use "./variables" as *;
 @use "./mixins" as *;
 
-
+a {
+    text-decoration: none;
+    color: inherit;
+}
 .footer {
 
     background-color: $primary-text;
@@ -9,6 +12,7 @@
     &--tablet-header {
         display: none;
     }
+
 
     &__logos {
         display: flex;

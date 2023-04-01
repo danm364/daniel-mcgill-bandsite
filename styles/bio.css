@@ -217,6 +217,11 @@
     flex-grow: 1;
   }
 }
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .footer {
   background-color: #323232;
   color: #FFFFFF;
