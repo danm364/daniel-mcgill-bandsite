@@ -18,50 +18,59 @@ const defaultCommentsData = [
     }
 ]
 
-function defaultComments() {
+
+
+function createComments() {
     //Parent container
     const parentNode = document.querySelector('.feed')
-
+    const parentContainer = document.createElement('div')
+    parentContainer.classList.add('feed__parent')
+    
     //create/get all the nodes that we will need
 
     for (let i = 0; i < defaultCommentsData.length; i++) {
-    const containerNode = document.createElement('div')
-    const headerNode = document.createElement('div')
-    const textNode = document.createElement('p')
-    const nameNode = document.createElement('p')
-    const dateNode = document.createElement('p')
-    const imgNode = document.createElement('img')
+
+        //add everything to this one node than add all comments to this node add to dom than if comment added remove all than add again
+        
+
+
+        const containerNode = document.createElement('div')
+        const headerNode = document.createElement('div')
+        const textNode = document.createElement('p')
+        const nameNode = document.createElement('p')
+        const dateNode = document.createElement('p')
+        const imgNode = document.createElement('img')
 
     //select our comment and name inputs
 
-    containerNode.classList.add("feed__container")
-    headerNode.classList.add("feed__header")
-    textNode.classList.add("feed__text")
-    nameNode.classList.add("feed__name")
-    dateNode.classList.add("feed__date")
-    imgNode.classList.add("feed__user-img")
+        containerNode.classList.add("feed__container")
+        headerNode.classList.add("feed__header")
+        textNode.classList.add("feed__text")
+        nameNode.classList.add("feed__name")
+        dateNode.classList.add("feed__date")
+        imgNode.classList.add("feed__user-img")
 
-    nameNode.innerText = defaultCommentsData[i].name
-    dateNode.innerText = defaultCommentsData[i].date
-    textNode.innerText = defaultCommentsData[i].paragraph
-    imgNode.src = "./assets/Logo/grey.png"
+        nameNode.innerText = defaultCommentsData[i].name
+        dateNode.innerText = defaultCommentsData[i].date
+        textNode.innerText = defaultCommentsData[i].paragraph
+        imgNode.src = "./assets/Logo/grey.png"
 
-    parentNode.appendChild(containerNode)
-    containerNode.appendChild(headerNode).insertAdjacentElement("afterend", textNode)
-    headerNode.appendChild(nameNode).insertAdjacentElement("afterend", dateNode).insertAdjacentElement("afterend", imgNode)
+        parentContainer.appendChild(containerNode)
+        containerNode.appendChild(headerNode).insertAdjacentElement("afterend", textNode)
+        headerNode.appendChild(nameNode).insertAdjacentElement("afterend", dateNode).insertAdjacentElement("afterend", imgNode)
     }
+
+    parentNode.appendChild(parentContainer)
+    
 }
 
-defaultComments()
+createComments()
 
-function createComment() {
+function addComment() {
+    const parentContainer = document.querySelector('.feed__parent')
+    //need to remove all the comments to rerender new list with new comment
+    parentContainer.remove()
 
-    //Parent container
-    const parentNode = document.querySelector('.feed')
-
-    //create/get all the nodes that we will need
-    const containerNode = document.createElement('div')
-    const headerNode = document.createElement('div')
     const textNode = document.createElement('p')
     const nameNode = document.createElement('p')
     const dateNode = document.createElement('p')
@@ -76,15 +85,6 @@ function createComment() {
     commentInput = commentInput.value
     
 
-    //add the correct classes to the new html so styling is added
-    containerNode.classList.add("feed__container")
-    headerNode.classList.add("feed__header")
-    textNode.classList.add("feed__text")
-    nameNode.classList.add("feed__name")
-    dateNode.classList.add("feed__date")
-    imgNode.classList.add("feed__user-img")
-
-    
     //get date when comment is added
     let date = new Date()
     date = date.toLocaleDateString()
@@ -100,9 +100,11 @@ function createComment() {
     const nameField = document.querySelector('#name__input')
     const textField = document.querySelector('#comment__text')
 
+    //reset to black border
     nameField.style.border = "1px solid black";
     textField.style.border = "1px solid black";
 
+    //change border if there is error if not create comment
     if (nameNode.innerText === '' && textNode.innerText === '') {
         console.log(textNode.style)
         nameField.style.border = "1px solid red";
@@ -116,34 +118,34 @@ function createComment() {
 
     else if (textNode.innerText === '') {
         textField.style.border = "1px solid red";
-        alert("Please fill out both the name and the comment you would like to make");
-    }
-    //keep a limit on comments or else will get too cluttered
-    else if (document.querySelectorAll('.feed__container').length > 6) {
-
-        alert("Comments have reached their limit on this page")
         
     }
-
     
-    //create the comment
+    //add comment to object array
     else {
-        parentNode.prepend(containerNode)
-        containerNode.appendChild(headerNode).insertAdjacentElement("afterend", textNode)
-        headerNode.appendChild(nameNode).insertAdjacentElement("afterend", dateNode).insertAdjacentElement("afterend", imgNode)
+        newComment = {
+            name: nameNode.innerText,
+            date: dateNode.innerText,
+            paragraph: textNode.innerText = commentInput
+        }
+
+        defaultCommentsData.unshift(newComment)
     }
 
 }
 
 
+const commentForm = document.querySelector('.comment__form')
 
-const commentBtn = document.querySelector('.comment__btn');
-/*we need to get the input from the input/textarea field */
-
-
-commentBtn.addEventListener("click", (e) => {
+//add event listener on submit that go through logic
+commentForm.addEventListener("submit", (e) => {
+    
     e.preventDefault()
-    createComment()
+    addComment()
+    createComments()
+    //after comment is created reset inputs to blank
+    e.target[0].value = ''
+    e.target[1].value = ''
 });
 
 

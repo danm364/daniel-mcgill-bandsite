@@ -13,8 +13,11 @@
     justify-content: center;
     flex-direction: column;
 
-    &>:first-child {
-        border-bottom: none;
+    &__col-headers {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        border-bottom: 1px solid $divider-color;
     }
     
     &__container-headers {
@@ -27,8 +30,25 @@
         flex-direction: column;
         border-bottom: 1px solid $divider-color;
 
+        &:focus {
+            background-color: $divider-color ;
+            border: transparent;
+        }
+
+
         &:last-child {
             margin-bottom: 20px;
+            
+        }
+
+        &:hover {
+            background-color: $alt-bg;
+        }
+
+
+        &>:first-child {
+            border-bottom: none;
+           
         }
         
     }
@@ -87,6 +107,11 @@
     
 
     .shows {
+
+        &__col-headers {
+            max-width: 1268px;
+            margin-right: 20px;
+        }
 
         &__placeholder {
             color: transparent;
@@ -162,7 +187,9 @@
         &__main-section {
             display: flex;
             justify-content: end;
-        }        
+        }
+        
+        
 
         &__hidden-header {
             display: none;

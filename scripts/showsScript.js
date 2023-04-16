@@ -47,6 +47,8 @@ function createShowContainer() {
 
 
     for (let i = 0; i < showsData.length; i++) {
+
+        //create each element and add class
         const parentContainer = document.createElement('div');
         parentContainer.classList.add("shows__container") // shows__container
         const showsContainer = document.createElement('form');// shows__form
@@ -72,12 +74,14 @@ function createShowContainer() {
         let locationInfo = document.createElement("p");
         locationInfo.classList.add("shows__location-info")
 
+
+        //set the headers
         venueHeader.innerText = "Venue"
         locationHeader.innerText = "Location"
         dateHeader.innerText = "Date"
         showsBtn.innerText = "BUY TICKETS"
 
-    //dateHeader.innerText = "01/01/23"
+        //glue together entire container for each show
         parentContainer.appendChild(showsContainer).appendChild(showsDate).appendChild(dateHeader)
         dateHeader.insertAdjacentElement("afterend", dateInfo)
         showsDate.insertAdjacentElement("afterend", showsLocation).insertAdjacentElement("afterend", showsVenue)
@@ -85,7 +89,7 @@ function createShowContainer() {
         showsLocation.appendChild(locationHeader).insertAdjacentElement("afterend", locationInfo)
         showsVenue.insertAdjacentElement("afterend", showsBtn)
 
-
+        //add data to inner text of show
         venueInfo.innerText = showsData[i].name
         locationInfo.innerText = showsData[i].location
         dateInfo.innerText = showsData[i].date
@@ -97,3 +101,14 @@ function createShowContainer() {
 }
 
 createShowContainer()
+
+
+
+//grab an nodelist of all show containers
+const parentContainer = document.querySelectorAll('.shows__container')
+
+
+//make tab index into an ever increasing order for focus
+parentContainer.forEach((element, index) => {
+    element.tabIndex = index+1;
+})
