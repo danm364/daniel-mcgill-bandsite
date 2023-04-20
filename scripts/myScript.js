@@ -20,6 +20,7 @@ const defaultCommentsData = [
 
 
 
+
 function createComments() {
     //Parent container
     const parentNode = document.querySelector('.feed')
